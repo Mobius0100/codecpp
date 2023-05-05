@@ -30,7 +30,7 @@ void read_to_vector(istream& in){
 
 int main()
 {
-    string s = "/Users/lucifer/Code/CPPLab/C++Plus/data/Loneliness and Wind.txt";
+    string s = "./data/Loneliness and Wind.txt";
 
     std::ifstream input(s);
 
