@@ -1,16 +1,22 @@
 /*
+    
 */
 #include <iostream>
-#include <cstdio>
 #include <string>
-#include <cmath>
+#include <vector>
+#include <algorithm>
+#include <list>
 
 using namespace std;
+    
+int main(){
+    vector<int> vec(100,7);
 
-int main()
-{
-    string str = "123123";
+    cout << vec.capacity() << endl;
 
-    cout << str << endl;
+    vec.push_back(9);
+
+    cout << vec.capacity() << endl;
+    
     return 0;
 }
