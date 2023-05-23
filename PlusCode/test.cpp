@@ -7,16 +7,31 @@
 #include <algorithm>
 #include <list>
 #include <queue>
+#include <opencv2/opencv.hpp>
+#include <opencv2/highgui.hpp>
+#include <set>
 
 using namespace std;
     
 int main(){
-    int a[5] = {1, 2, 3, 4, 5};
-    priority_queue<int> pq(a, a+5);
+    multiset<string> c;
+    vector<string> v{"link", "love", "mipha"};
 
-    vector<int> v = {1, 2, 3, 4, 5};
-    queue<int> q(a, a+5);
+    // copy(v.begin(), v.end(), back_inserter(c));   error
+    copy(v.begin(), v.end(), inserter(c, c.end()));
 
-    
+    copy(c.begin(), c.end(), back_inserter(v));
+    copy(c.begin(), c.end(), inserter(v, v.end()));
+
+
+    for(auto &s : c){
+        cout << s << " ";
+    }
+    cout << endl;
+
+    for(auto &s : v){
+        cout << s << " ";
+    }
+
     return 0;
 }
