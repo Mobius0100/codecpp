@@ -1,4 +1,5 @@
 {
+	// 此配置文件在run c++ file按钮时才生效，如果使用run code 需要配置settings.json
 	"version": "2.0.0",
 	"tasks": [
 		{
@@ -12,7 +13,11 @@
 				"${file}",
 				"-o",
 				"${fileDirname}/build/${fileBasenameNoExtension}",
-				"-std=c++14"
+				"-std=c++14",
+				"`pkg-config",
+				"--libs",
+				"--cflags",
+				"opencv4`"
 			],
 			"options": {
 				"cwd": "${fileDirname}"
